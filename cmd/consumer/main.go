@@ -22,7 +22,7 @@ func main() {
 	kingpin.Parse()
 	config := sarama.NewConfig()
 	config.Consumer.Return.Errors = true
-	brokers := *brokerList
+	brokers := *brokerList*
 	master, err := sarama.NewConsumer(brokers, config)
 	if err != nil {
 		log.Panic(err)
