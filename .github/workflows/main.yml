@@ -42,7 +42,6 @@ jobs:
       with:
         distribution: 'corretto' # See 'Supported distributions' for available options
         java-version: '8'
-    - run: java -cp java HelloWorldApp
     - name: SonarQube Scan
     
       uses: kitabisa/sonarqube-action@v1.1.0
