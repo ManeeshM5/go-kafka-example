@@ -25,5 +25,5 @@ jobs:
       - name: Build docker images
         run: docker pull bridgecrew/checkov
       - name: Run tests
-        run: docker run --tty --rm --volume /user/tf:/tf --workdir /tf bridgecrew/checkov --directory /tf
+        run: docker run --tty --rm --volume $PWD:/tf --workdir /tf bridgecrew/checkov --directory /tf
   
